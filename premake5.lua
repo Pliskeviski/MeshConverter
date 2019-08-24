@@ -29,13 +29,9 @@ project "Converter"
 	}
     
 	filter "system:windows"
-        buildoptions { "-std=c11", "-lgdi32" }
-        systemversion "10.0.17134.0"
+        systemversion "latest"
         staticruntime "On"
-
-		defines 
-		{ 
-            "_CRT_SECURE_NO_WARNINGS"
-		}
+        
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
+		
